@@ -1,7 +1,3 @@
----
-title: Sensor Lab Workshop
----
-
 # Sensor Bridge 
 
 This is the 'get started' guide for the Sensor Bridge hardware and software that is used in the [Sensor Lab](http://www.sensorlab.nl) workshop. This guide will explain what it is, how it should be connected and what you can do with it.
