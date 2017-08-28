@@ -66,7 +66,7 @@ timestamp,sensor_1,sensor_2,sensor_3
 1503578607910,0.00765722,0,0
 ```
 
-## Using the application to capture CSV data
+## Using the application to capture JSON data
 
 To start capturing JSON data, click the "Setup" button at the bottom right of the screen. Choose "JSON file" as the output, set the capture interval (time between data points) to the interval you want and the capture directory to the folder you want the JSON files to be stored. Click "Ok" to save the changes. At the bottom of the screen you will see a description of your output settings. Click "Start capture" to start capturing the data to a JSON file. Clicking "Stop capture" will stop the capture.
 
