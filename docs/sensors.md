@@ -9,6 +9,10 @@ This is the [Pulse Sensor](https://pulsesensor.com) heartbeat sensor that can be
 
 [More information here](https://pulsesensor.com/)
 
+### Example data
+
+* [Heartbeat data in CSV format (50ms interval)](example-data/heartbeat-50ms.csv)
+* [Heartbeat data in JSON format (50ms interval)](example-data/heartbeat-50ms.json)
 
 ## Muscle sensor
 
