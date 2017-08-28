@@ -95,7 +95,7 @@ Example JSON file:
 
 ## Using the application to serve sensor data over a WebSocket 
 
-If you want to use live data in an application (Processing, Web, Unity3D or something else) you can use the WebSocket capture option to serve data from the sensor bridge. To do so, click the "Setup" button at the bottom right of the screen. Choose "WebSocket" as the output, set the capture interval (time between data points) to the interval you want and the port to serve the data on (10ms is recommended for live data). Click "Ok" to save the changes. At the bottom of the screen you will see a description of your output settings. Click "Start capture" to start serving the data over WebSocket. You will now be able to connect a WebSocket client on the configured port to listen for data. Clicking "Stop capture" will stop the WebSocket server.
+If you want to use live data in an application (Processing, Web, Unity3D or something else) you can use the WebSocket capture option to serve data from the sensor bridge. To do so, click the "Setup" button at the bottom right of the screen. Choose "WebSocket" as the output, set the capture interval (time between data points) to the interval you want and the port to serve the data on (10ms is recommended for live data). Click "Ok" to save the changes. At the bottom of the screen you will see a description of your output settings. Click "Start capture" to start serving the data over WebSocket (you might get a firewall notification to open up a port). You will now be able to connect a WebSocket client on the configured port to listen for data. Clicking "Stop capture" will stop the WebSocket server.
 
 The WebSocket server will pass data packets with one reading with the following format:
 
@@ -108,3 +108,5 @@ Example Websocket message:
   "sensor_3": 0.232132
 }
 ```
+
+To easily test the WebSocket server, you can use the [WebSocket.org echo test](https://www.websocket.org/echo.html); use ws://localhost:9010 as the location (or ws://localhost:{port} if you didn't use the default port). You should see the sensor values appearing in the log.
