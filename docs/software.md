@@ -1,4 +1,5 @@
 # Using the Sensor Bridge software
+(< Back to overview)[README.md]
 
 Make sure you already have the Sensor Bridge hardware connected (See [Connecting the hardware](hardware)).
 
@@ -19,11 +20,11 @@ Make sure you already have the Sensor Bridge hardware connected (See [Connecting
 
 ## Configuring the serial port
 
-Select the serial port that the Sensor Bridge is connected to using the dropdown menu at the bottom left of the screen. The application only scans for ports at startup, so if the Sensor Bridge is connected while the application is running, you need to restart the application for the Serial Bridge to show up.
+Select the serial port that the Sensor Bridge is connected to using the dropdown menu at the bottom left of the screen. If you connected the Serial Bridge after starting the application, you can click "Rescan" to update the list of ports.
 
-For macOS users, the port will be named "cu.usbmodem"
+For macOS users, the port will be named "tty.wchusbserial640 (USB2.0-Serial)"
 
-For Windows users, the port will be named "COM# (USB-Serial CH340)"
+For Windows users, the port will be named something like "COM3 (USB-Serial CH340)" (The actual number after COM may be different)
 
 ## Reading the values
 
@@ -58,8 +59,11 @@ The capture CSV file will have the following format:
 Example CSV file:
 
 ```text
-timestamp,SERIAL_0,SERIAL_1,SERIAL_2
-12312321,12,12,12
+timestamp,sensor_1,sensor_2,sensor_3
+1503578607880,0.00814598,0,0
+1503578607890,0.00814598,0,0
+1503578607900,0.00765722,0,0
+1503578607910,0.00765722,0,0
 ```
 
 ## Using the application to send sensor data over a WebSocket 
@@ -68,8 +72,8 @@ Example Websocket message:
 
 ```javascript
 {
-  "sensor_0": 0.232132,
   "sensor_1": 0.232132,
-  "sensor_2": 0.232132
+  "sensor_2": 0.232132,
+  "sensor_3": 0.232132
 }
 ```

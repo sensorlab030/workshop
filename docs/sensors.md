@@ -1,4 +1,5 @@
 # Sensors
+(< Back to overview)[README.md]
 
 ## ECG (Heatbeat sensor)
 
@@ -15,6 +16,3 @@ http://www.advancertechnologies.com/p/myoware.html
 
 
 ## Flex sensor
-
-
-## Distance sensor

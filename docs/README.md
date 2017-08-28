@@ -4,7 +4,7 @@ This is the 'get started' guide for the Sensor Bridge hardware and software that
 
 ## What is the Sensor Bridge?
 
-The Sensor Bridge is some [Arduino](www.arduino.cc) based hardware and some macOS/Windows software that makes it easier to connect a selected set sensors to your computer and use the data from those sensors. 
+The Sensor Bridge is some [Arduino](www.arduino.cc) based hardware and some macOS/Windows software that makes it easy to connect a selected set sensors to your computer and use the data from those sensors. 
 
 The Arduino board reads the values of the connected sensors and sends those values continuously over the USB/serial connection to the computer. The Sensor Bridge client application listens on the USB/serial port for incoming data, can optionally smooth the data for a cleaner signal and can then either record the incoming data to [CSV files](https://en.wikipedia.org/wiki/Comma-separated_values) or pass the data on to another (web) application through a [websocket](https://en.wikipedia.org/wiki/WebSocket).
 
