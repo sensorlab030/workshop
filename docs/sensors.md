@@ -1,5 +1,5 @@
 # Sensors
-(< Back to overview)[README.md]
+[< Back to overview](README.md)
 
 ## ECG (Heatbeat sensor)
 

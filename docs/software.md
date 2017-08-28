@@ -1,5 +1,5 @@
 # Using the Sensor Bridge software
-(< Back to overview)[README.md]
+[< Back to overview](README.md)
 
 Make sure you already have the Sensor Bridge hardware connected (See [Connecting the hardware](hardware)).
 

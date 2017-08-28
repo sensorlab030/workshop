@@ -1,5 +1,5 @@
 # Connecting the hardware
-(< Back to overview)[README.md]
+[< Back to overview](README.md)
 
 ## Connecting the Sensor Bridge to your computer
 
