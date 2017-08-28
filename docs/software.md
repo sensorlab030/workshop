@@ -48,7 +48,7 @@ To start capturing CSV data, click the "Setup" button at the bottom right of the
 
 ## CSV file data format
 
-The capture CSV file will have the following format:
+The captured CSV file will have the following format:
 
 * The first line is a header line 
 * The first column has the timestamp, formatted as [Unix Timestamp](https://en.wikipedia.org/wiki/Unix_time) in milliseconds
@@ -66,7 +66,38 @@ timestamp,sensor_1,sensor_2,sensor_3
 1503578607910,0.00765722,0,0
 ```
 
-## Using the application to send sensor data over a WebSocket 
+## Using the application to capture CSV data
+
+To start capturing JSON data, click the "Setup" button at the bottom right of the screen. Choose "JSON file" as the output, set the capture interval (time between data points) to the interval you want and the capture directory to the folder you want the JSON files to be stored. Click "Ok" to save the changes. At the bottom of the screen you will see a description of your output settings. Click "Start capture" to start capturing the data to a JSON file. Clicking "Stop capture" will stop the capture.
+
+## JSON file data format
+
+The captured JSON file will contain an array of data frames, each containing three sensor values and a timestamp in  as [Unix Timestamp](https://en.wikipedia.org/wiki/Unix_time) in milliseconds
+
+Example JSON file:
+
+```javascript
+[
+    {
+        "sensor_1": 0.05669599398970604,
+        "sensor_2": 0,
+        "sensor_3": 0,
+        "timestamp": 1503913184813
+    },
+    {
+        "sensor_1": 0.039100684225559235,
+        "sensor_2": 0,
+        "sensor_3": 0,
+        "timestamp": 1503913185009
+    }
+]
+```
+
+## Using the application to serve sensor data over a WebSocket 
+
+If you want to use live data in an application (Processing, Web, Unity3D or something else) you can use the WebSocket capture option to serve data from the sensor bridge. To do so, click the "Setup" button at the bottom right of the screen. Choose "WebSocket" as the output, set the capture interval (time between data points) to the interval you want and the port to serve the data on (10ms is recommended for live data). Click "Ok" to save the changes. At the bottom of the screen you will see a description of your output settings. Click "Start capture" to start serving the data over WebSocket. You will now be able to connect a WebSocket client on the configured port to listen for data. Clicking "Stop capture" will stop the WebSocket server.
+
+The WebSocket server will pass data packets with one reading with the following format:
 
 Example Websocket message:
 
