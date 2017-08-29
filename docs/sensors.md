@@ -38,7 +38,7 @@ This EMG (electromyography) sensor can measure muscle activation via electric po
 
 ### Example data
 
-#### Three slow arm flexes, then three ffast arm flexes
+#### Three slow arm flexes, then three fast arm flexes
 
 * [Muscle sensor data in CSV format (50ms interval)](../example-data/muscle-50ms.csv)
 * [Muscle sensor data in JSON format (50ms interval)](../example-data/muscle-50ms.json)

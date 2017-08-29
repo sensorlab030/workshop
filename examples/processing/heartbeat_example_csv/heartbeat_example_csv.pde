@@ -11,7 +11,7 @@ void setup(){
   
   size(1080, 1080);  // Set the output format to 1080x1080px
   noLoop();         // We're not continuously redrawing, so no looping needed
-  data = loadTable("heartbeat-data.csv", "header"); // Load the data
+  data = loadTable("heartbeat-50ms.csv", "header"); // Load the data
    
 }
 
@@ -37,14 +37,14 @@ void draw() {
   for (int i = 0; i < data.getRowCount(); i++) {
     
     // Get current heartbeat value
-    float heartbeatValue = data.getFloat(i, "SERIAL_0");
+    float heartbeatValue = data.getFloat(i, "sensor_1");
     
     // Calculate new pos
     float heartbeatRadius = heartbeatValue * RADIUS;
     PVector newPos = new PVector(
       cos(currentAngle) * heartbeatRadius, // X-coordinate
       sin(currentAngle) * heartbeatRadius // Y-coordinate
-      );
+    );
       
    
     if (previousPos != null) {
