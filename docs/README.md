@@ -24,13 +24,10 @@ We use a number of biometric sensors to capture the activity of people; see the 
 ## Examples of visualizing sensor data
 
 ### Processing examples
+* [Visualizing heartbeat from CSV data](https://github.com/sensorlab030/workshop/tree/master/examples/processing/heartbeat_example_csv)
+* [Visualizing live heartbeat data using WebSockets](https://github.com/sensorlab030/workshop/tree/master/examples/processing/heartbeat_example_websocket)
 
-* [Visualizing heartbeat from CSV data](../examples/processing/heartbeat_example_csv)
-* [Visualizing live heartbeat data using WebSockets](../examples/processing/heartbeat_example_websocket)
-
-
-### Other
-* Visualizing captured CSV data using RAW Graphs
+### D3.js examples
 
 ## Inspiration for visualizations
 
