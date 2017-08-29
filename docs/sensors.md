@@ -43,6 +43,8 @@ There are two common ways to attach it to your body: either use a velcro strap a
 
 * [Muscle sensor data in CSV format (50ms interval)](../example-data/muscle-50ms.csv)
 * [Muscle sensor data in JSON format (50ms interval)](../example-data/muscle-50ms.json)
+* [Muscle sensor data in CSV format (50ms interval, Simple Moving Average smoothing)](../example-data/muscle-50m-sma.csv)
+* [Muscle sensor data in JSON format (50ms interval, Simple Moving Average smoothing)](../example-data/muscle-50ms-sma.json)
 
 ### References
 
