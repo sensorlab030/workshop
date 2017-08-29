@@ -15,7 +15,7 @@ The Arduino board reads the values of the connected sensors and sends those valu
 
 ## Available sensors
 
-We use a number of biometric sensors to capture the activity of people; see the sensors page for specific information and example data
+We use a number of biometric sensors to capture the activity of people; see the [sensors page](sensors.md) for specific information and example data
 
 * [ECG (Heartbeat) sensor](sensors.md/#ecg-heatbeat-sensor)
 * [Muscle sensor](sensors.md/#muscle-sensor)

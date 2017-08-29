@@ -26,11 +26,27 @@ There are two common ways to attach it to your body: either use a velcro strap a
 
 * [Technical information from the manufacturer](https://pulsesensor.com/pages/pulse-sensor-amped-arduino-v1dot1)
 
-## Muscle sensor
+## EMG (Muscle sensor)
+
+![alt text](images/sensor_emg.jpg "EMG Sensor (Muscle sensor)")
 
 ### Attaching the sensor to your body
 
-http://www.advancertechnologies.com/p/myoware.html
+1. Prepare the sensor by attaching three electrodes pads to the sensor (two on the red board, one on the short cable)
+2. Determine where you want to position the electrodes, one of the electrodes on the board should be in the center of the muscle group, the other one should line up in the direction of the muscle length (see image above). The reference electrode (on the short cable) should be placed on a bony or nonadjacent muscular part of the body.
+3. Thoroughly clean the skin with soap and water where you want to apply the electrodes to remove any dirt and skin oils.
+4. Remove the protective plastic from the two electrodes on the board and place them on the muscle group
+
+### Reading the data
+
+### Example data
+
+* [Muscle sensor data in CSV format (50ms interval)](../example-data/muscle-50ms.csv)
+* [Muscle sensor data in JSON format (50ms interval)](../example-data/muscle-50ms.json)
+
+### References
+
+* [MyoWare muscle sensor manual](https://github.com/AdvancerTechnologies/MyoWare_MuscleSensor/raw/master/Documents/AT-04-001.pdf)
 
 
 ## Flex sensor
