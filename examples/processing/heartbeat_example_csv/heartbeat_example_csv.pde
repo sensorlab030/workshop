@@ -23,9 +23,7 @@ void draw() {
   // Calculate how much we should rotate for each row for a complete circle
   float rotationPerRow = TWO_PI / (float) data.getRowCount();
   float currentAngle = 0;
-  
-
-  
+    
   // Translate to center
   translate(540, 540);
   

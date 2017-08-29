@@ -6,7 +6,7 @@ long BPM;             // Deze variabele wordt gebruikt om de gemeten hartslag in
 
 void setup() {
   size(1080, 1080);
-  wsc = new WebsocketClient(this, "ws://localhost:9001");
+  wsc = new WebsocketClient(this, "ws://localhost:9010");
 }
 
 void draw() {
