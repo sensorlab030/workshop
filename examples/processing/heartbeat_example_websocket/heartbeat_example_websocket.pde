@@ -1,8 +1,9 @@
 import websockets.*;
 
 /**
- * Small example that shows how to use CSV data gathered from the Sensor Bridge in
- * Processing using live data over the websocket.
+ * Small example that shows how to use live data gathered from the Sensor Bridge in
+ * Processing using live data over a WebSocket. Make sure you have installed the Processing
+ * websockets library from Lasse Steenbock Vestergaard!
  */
 
 final int RADIUS = 540; // Radius of the circular heartbeat graph 

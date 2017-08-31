@@ -15,8 +15,8 @@ There are two common ways to attach it to your body: either use a velcro strap a
 
 Heartbeat data of person in rest
 
-* [Heartbeat data in CSV format (50ms interval)](../example-data/heartbeat-50ms.csv)
-* [Heartbeat data in JSON format (50ms interval)](../example-data/heartbeat-50ms.json)
+* [Heartbeat data in CSV format (50ms interval)](https://github.com/sensorlab030/workshop/blob/master/example-data/heartbeat-50ms.csv)
+* [Heartbeat data in JSON format (50ms interval)](https://github.com/sensorlab030/workshop/blob/master/example-data/heartbeat-50ms.json)
 
 ### References
 
@@ -40,13 +40,13 @@ This EMG (electromyography) sensor can measure muscle activation via electric po
 
 #### Three slow arm flexes, then three fast arm flexes
 
-* [Muscle sensor data in CSV format (50ms interval)](../example-data/muscle-50ms.csv)
-* [Muscle sensor data in JSON format (50ms interval)](../example-data/muscle-50ms.json)
+* [Muscle sensor data in CSV format (50ms interval)](https://github.com/sensorlab030/workshop/blob/master/example-data/muscle-50ms.csv)
+* [Muscle sensor data in JSON format (50ms interval)](https://github.com/sensorlab030/workshop/blob/master/example-data/muscle-50ms.json)
 
 #### Three slow arm flexes, then six fast arm flexes with Simple moving average smoothing
 
-* [Muscle sensor data in CSV format (50ms interval, Simple Moving Average smoothing)](../example-data/muscle-50m-sma.csv)
-* [Muscle sensor data in JSON format (50ms interval, Simple Moving Average smoothing)](../example-data/muscle-50ms-sma.json)
+* [Muscle sensor data in CSV format (50ms interval, Simple Moving Average smoothing)](https://github.com/sensorlab030/workshop/blob/master/example-data/muscle-50m-sma.csv)
+* [Muscle sensor data in JSON format (50ms interval, Simple Moving Average smoothing)](https://github.com/sensorlab030/workshop/blob/master/example-data/muscle-50ms-sma.json)
 
 ### References
 

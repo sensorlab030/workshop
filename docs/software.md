@@ -26,6 +26,8 @@ For macOS users, the port will be named "tty.wchusbserial640 (USB2.0-Serial)"
 
 For Windows users, the port will be named something like "COM3 (USB-Serial CH340)" (The actual number after COM may be different)
 
+On some computers, the Sensor Bridge will not be recognized without installing the CH340G driver, installation instructions are [here](ch340G-driver.md)
+
 ## Reading the values
 
 Once the serial port is configured correctly, the application will show the data for the connected sensors in the graph. You can use these graphs for troubleshooting the data while making a visualization because it will always show the raw sensor data. The values are always mapped from 0.0 to 1.0 (as they will be in the output).
