@@ -26,7 +26,7 @@ For macOS users, the port will be named "tty.wchusbserial640 (USB2.0-Serial)"
 
 For Windows users, the port will be named something like "COM3 (USB-Serial CH340)" (The actual number after COM may be different)
 
-On some computers, the Sensor Bridge will not be recognized without installing the CH340G driver, installation instructions are [here](ch340G-driver.md)
+> On some computers, the Sensor Bridge will not be recognized without installing the CH340G driver, installation instructions are [here](ch340G-driver.md)
 
 ## Reading the values
 
