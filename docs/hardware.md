@@ -5,7 +5,7 @@
 
 To connect the Sensor Bridge to your computer you simply connect a USB cable to the Sensor Bridge and your computer. The 'ON' led light should light up on the Sensor Bridge board. 
 
-On some computers, the Sensor Bridge will not be recognized without installing the CH340G driver, installation instructions are [here](ch340G-driver.md)
+> On some computers, the Sensor Bridge will not be recognized without installing the CH340G driver, installation instructions are [here](ch340G-driver.md)
 
 ## Connecting sensors to the Sensor Bridge
 

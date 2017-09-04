@@ -52,4 +52,44 @@ This EMG (electromyography) sensor can measure muscle activation via electric po
 
 * [MyoWare muscle sensor manual](https://github.com/AdvancerTechnologies/MyoWare_MuscleSensor/raw/master/Documents/AT-04-001.pdf)
 
+## Sound sensor
+
+This sensor board captures audio information. We capture the audio envelope, which gives you a way to read the amplitude of sound to detect ambient sound, or people speaking at different levels of intensity.
+
+### Example data
+
+First ~20 seconds of the sound envelope of the [Imperial March](https://www.youtube.com/watch?v=-bzWSJG93P8)
+
+* [Sound sensor data in CSV format (10ms interval)](https://github.com/sensorlab030/workshop/blob/master/example-data/sound-10ms.csv)
+* [Sound sensor data in JSON format (10ms interval)](https://github.com/sensorlab030/workshop/blob/master/example-data/sound-10ms.json)
+
+### References
+
+* [Hookup guide (includes an explanation of what the envelope measurement is)](https://learn.sparkfun.com/tutorials/sound-detector-hookup-guide)
+
 ## Flex sensor
+
+The flex sensor allows you to detect for instance bending of a joint (such as your finger joints). Whenever the sensor is bent, the input signal drops accordingly.
+
+### Attaching the sensor to your body
+
+The easiest way to attach the sensor to your body is to use sports tape to tape it to your limbs. Take care only to flex the striped area of the sensor and not the part where the wires are connected, which would cause the sensor or the wires to break.
+
+### Example data
+
+Data captured with the sensor connected to the index finger over the first joint (closest to the hand):
+
+#### Three slow finger flexes, then three fast finger flexes, followed by another three slow finger flexes
+
+* [Flex sensor data in CSV format (10ms interval)](https://github.com/sensorlab030/workshop/blob/master/example-data/flex-10ms.csv)
+* [Flex sensor data in JSON format (10ms interval)](https://github.com/sensorlab030/workshop/blob/master/example-data/flex-10ms.json)
+
+#### Three slow finger flexes, then three fast finger flexes, followed by another three slow finger flexes with Simple moving average smoothing
+
+* [Flex sensor data in CSV format (10ms interval, Simple Moving Average smoothing)](https://github.com/sensorlab030/workshop/blob/master/example-data/flex-10m-sma.csv)
+* [Flex sensor data in JSON format (10ms interval, Simple Moving Average smoothing)](https://github.com/sensorlab030/workshop/blob/master/example-data/flex-10ms-sma.json)
+
+### References
+
+* [Hookup guide](https://learn.sparkfun.com/tutorials/flex-sensor-hookup-guide)
+
