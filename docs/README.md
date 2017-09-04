@@ -21,6 +21,7 @@ We use a number of biometric sensors to capture the activity of people; see the 
 * [Muscle sensor](sensors.md/#muscle-sensor)
 * [Sound sensor](sensors.md/#sound-sensor)
 * [Flex sensor](sensors.md/#flex-sensor)
+* [Pressure sensor](sensors.md/#pressure-sensor)
 
 ## Examples of visualizing sensor data
 

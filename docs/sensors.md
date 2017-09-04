@@ -93,3 +93,20 @@ Data captured with the sensor connected to the index finger over the first joint
 
 * [Hookup guide](https://learn.sparkfun.com/tutorials/flex-sensor-hookup-guide)
 
+## Pressure sensor
+
+This Force Sensitive Resistor changes it's resistance when the pressure applied to it changes. The harder it is pressed, the lower the resistance will be (and thus, the higher the measured value).
+
+### Example data
+
+First ~20 seconds of the sound envelope of the [Imperial March](https://www.youtube.com/watch?v=-bzWSJG93P8)
+
+* [Pressure sensor data in CSV format (10ms interval)](https://github.com/sensorlab030/workshop/blob/master/example-data/pressure-10ms.csv)
+* [Pressure sensor data in JSON format (10ms interval)](https://github.com/sensorlab030/workshop/blob/master/example-data/pressure-10ms.json)
+
+### References
+
+* [In-depth integration guide](https://www.sparkfun.com/datasheets/Sensors/Pressure/fsrguide.pdf)
+* [Hookup guide](https://learn.sparkfun.com/tutorials/force-sensitive-resistor-hookup-guide)
+
+
