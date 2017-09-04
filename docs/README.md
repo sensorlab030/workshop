@@ -19,6 +19,7 @@ We use a number of biometric sensors to capture the activity of people; see the 
 
 * [ECG (Heartbeat) sensor](sensors.md/#ecg-heatbeat-sensor)
 * [Muscle sensor](sensors.md/#muscle-sensor)
+* [Sound sensor](sensors.md/#sound-sensor)
 * [Flex sensor](sensors.md/#flex-sensor)
 
 ## Examples of visualizing sensor data
