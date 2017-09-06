@@ -3,6 +3,8 @@
 
 Make sure you already have the Sensor Bridge hardware connected (See [Connecting the hardware](hardware)).
 
+![SensorBridge application](images/application-overview.jpg)
+
 ## Installing the application
 
 ### Installing on Apple macOS
@@ -20,6 +22,8 @@ Make sure you already have the Sensor Bridge hardware connected (See [Connecting
 
 ## Configuring the serial port
 
+![SensorBridge application](images/application-serial.jpg)
+
 Select the serial port that the Sensor Bridge is connected to using the dropdown menu at the bottom left of the screen. If you connected the Serial Bridge after starting the application, you can click "Rescan" to update the list of ports.
 
 For macOS users, the port will be named "tty.wchusbserial640 (USB2.0-Serial)"
@@ -34,6 +38,8 @@ Once the serial port is configured correctly, the application will show the data
 
 ## Applying smoothing on the sensor data
 
+![SensorBridge application](images/application-smoothing.jpg)
+
 If the data is erratic, it might be useful to apply some smoothing to the data, before it is recorded to CSV or sent to another application. To do so, select one of smoothing types (other than 'None') from the dropdown menu below the sensor's graph. The slider next to the dropdown menu can be used to control how much smoothing will be applied to the data (all the way to the left for no smoothing, all the way to the right for maximum smoothing). 
 
 In the graph there will be a blue line for the smoothed data (which will be capture or sent over WebSocket) and a grey line for the raw, unsmoothed data.
@@ -45,6 +51,8 @@ These are the smoothing options;
 * EXP: [Single/Basic Exponential smoothing](https://en.wikipedia.org/wiki/Exponential_smoothing#Basic_exponential_smoothing)
 
 ## Using the application to capture CSV data
+
+![SensorBridge application](images/application-setup.jpg)
 
 To start capturing CSV data, click the "Setup" button at the bottom right of the screen. Choose "CSV file" as the output, set the capture interval (time between data points) to the interval you want and the capture directory to the folder you want the CSV files to be stored. Click "Ok" to save the changes. At the bottom of the screen you will see a description of your output settings. Click "Start capture" to start capturing the data to a CSV file. Clicking "Stop capture" will stop the capture.
 

@@ -3,7 +3,7 @@
 
 ## ECG (Heatbeat sensor)
 
-![alt text](images/sensor_ecg.jpg "ECG Sensor (Heartbeat sensor)")
+![ECG Sensor (Heartbeat sensor)](images/sensor_ecg.jpg)
 
 This is the [Pulse Sensor](https://pulsesensor.com) heartbeat sensor that can be used to visualize live heartbeats or calculate beats per minute.
 
@@ -24,7 +24,7 @@ Heartbeat data of person in rest
 
 ## EMG (Muscle sensor)
 
-![alt text](images/sensor_emg.jpg "EMG Sensor (Muscle sensor)")
+![EMG Sensor (Muscle sensor)](images/sensor_emg.jpg)
 
 This EMG (electromyography) sensor can measure muscle activation via electric potential.
 

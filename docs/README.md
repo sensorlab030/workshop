@@ -29,8 +29,15 @@ We use a number of biometric sensors to capture the activity of people; see the 
 * [Visualizing heartbeat from CSV data](https://github.com/sensorlab030/workshop/tree/master/examples/processing/heartbeat_example_csv)
 * [Visualizing live heartbeat data using WebSockets](https://github.com/sensorlab030/workshop/tree/master/examples/processing/heartbeat_example_websocket)
 
-### D3.js examples
+## References
+
+* [Processing website](https://processing.org/)
+* [Processing language reference](https://processing.org/reference/)
 
 ## Inspiration for visualizations
 
 * [OpenProcessing](https://www.openprocessing.org/browse#)
+* [swiss in css](https://swissincss.com)
+* [Rafaël Rozendaal](http://www.newrafael.com/websites/)
+* [Feltron Report 2014](http://feltron.com/FAR14.html)
+
