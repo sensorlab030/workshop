@@ -26,6 +26,8 @@ We use a number of biometric sensors to capture the activity of people; see the 
 ## Examples of visualizing sensor data
 
 ### Processing examples
+* [Minimal template for reading CSV data](https://github.com/sensorlab030/workshop/tree/master/examples/processing/template_csv)
+* [Minimal template for reading WebSocket data](https://github.com/sensorlab030/workshop/tree/master/examples/processing/template_websocket)
 * [Visualizing heartbeat from CSV data](https://github.com/sensorlab030/workshop/tree/master/examples/processing/heartbeat_example_csv)
 * [Visualizing live heartbeat data using WebSockets](https://github.com/sensorlab030/workshop/tree/master/examples/processing/heartbeat_example_websocket)
 
