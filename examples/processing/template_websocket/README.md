@@ -1,5 +1,3 @@
 # Processing heartbeat sensor WebSocket example
 
-This example shows how to use Processing and captured CSV data for the heartbeat sensor into a visualization to make this:
-
-![Processing heartbeat visualization](heartbeat_example_websocket.png)
+Minimal template that shows how to connect a WebSocket and get the sensor values from it and how to save the canvas to a PNG image
