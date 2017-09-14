@@ -16,7 +16,7 @@ ArrayList<Float> heartbeatValues = new ArrayList<Float>(MAX_DATAPOINTS);
 void setup(){
   size(1080, 1080);  // Set the output format to 1080x1080px
   smooth();
-  websocket = new WebsocketClient(this, "ws://localhost:9010"); // Connect to the SensorBridge websocket (make sure the Setup options match)
+  websocket = new WebsocketClient(this, "ws://localhost:9001"); // Connect to the SensorBridge websocket (make sure the Setup options match)
   
   // Fill the heartbeatValues list with initial values
   for (int i = 0; i < MAX_DATAPOINTS; i++) {

@@ -18,7 +18,7 @@ void setup(){
   
   // Initialize the WebSocket client to connect to the SensorBridge websocket.
   // Make sure the Setup of the SensorBridge (port) match 
-  websocket = new WebsocketClient(this, "ws://localhost:9010");
+  websocket = new WebsocketClient(this, "ws://localhost:9001");
   
 }
 
