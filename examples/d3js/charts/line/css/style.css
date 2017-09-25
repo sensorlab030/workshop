@@ -1,0 +1,17 @@
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.axis--y .tick line {
+  display: none;
+}
+
+.axis--y .tick text {
+  font-size: 1em;
+}
+
+path.line {
+  stroke: red;
+}

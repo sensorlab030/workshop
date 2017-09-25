@@ -1,0 +1,26 @@
+html {
+  font-size: 18px;
+  font-family: 'Helvetica', sans-serif;
+}
+
+header img {
+  width: 20em;
+  height: inherit;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav {
+  margin-left: 10em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p {
+  max-width: 20em;
+}
