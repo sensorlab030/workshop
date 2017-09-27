@@ -2,6 +2,7 @@ var svg = d3.select('svg');
 var width = svg.attr('width');
 var height = svg.attr('height');
 
+var node;
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 var simulation = d3
   .forceSimulation()
@@ -9,7 +10,7 @@ var simulation = d3
   .force('center', d3.forceCenter(width / 2, height / 2));
 
 var port = 9001; // the port you choose in the SensorBridge setup
-var sensor = 2; // which sensor data should be rendered
+var sensor = 1; // which sensor data should be rendered
 var radius = 8; // the width of a single node
 var socket = new WebSocket('ws://localhost:' + port);
 
@@ -31,7 +32,7 @@ d3.json('./example-data/miserables.json', function(error, data) {
 });
 
 function render(data) {
-  var node = svg
+  node = svg
     .append('g')
     .attr('class', 'nodes')
     .selectAll('circle')
@@ -44,22 +45,10 @@ function render(data) {
     });
 
   simulation.nodes(data).on('tick', ticked);
-
-  function ticked() {
-    // position the nodes and keep them inside the SVG
-    // https://stackoverflow.com/a/9577224
-    node
-      .attr('cx', function(d) {
-        return (d.x = Math.max(radius, Math.min(width - radius, d.x)));
-      })
-      .attr('cy', function(d) {
-        return (d.y = Math.max(radius, Math.min(height - radius, d.y)));
-      });
-  }
 }
 
 function update(data) {
-  var node = svg.selectAll('circle').data(data);
+  node = svg.selectAll('circle').data(data);
 
   node
     .exit()
@@ -81,16 +70,16 @@ function update(data) {
   // Update and restart the simulation.
   simulation.nodes(data).on('tick', ticked);
   simulation.alpha(1).restart();
+}
 
-  function ticked() {
-    // position the nodes and keep them inside the SVG
-    // https://stackoverflow.com/a/9577224
-    node
-      .attr('cx', function(d) {
-        return (d.x = Math.max(radius, Math.min(width - radius, d.x)));
-      })
-      .attr('cy', function(d) {
-        return (d.y = Math.max(radius, Math.min(height - radius, d.y)));
-      });
-  }
+function ticked() {
+  // position the nodes and keep them inside the SVG
+  // https://stackoverflow.com/a/9577224
+  node
+    .attr('cx', function(d) {
+      return (d.x = Math.max(radius, Math.min(width - radius, d.x)));
+    })
+    .attr('cy', function(d) {
+      return (d.y = Math.max(radius, Math.min(height - radius, d.y)));
+    });
 }
