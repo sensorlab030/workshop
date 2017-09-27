@@ -1,0 +1,33 @@
+main ul {
+  list-style: none;
+  padding: 0;
+}
+
+main span {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.5em;
+}
+
+main li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+main span {
+  border: 0.2em solid black;
+}
+
+main li:nth-of-type(1) span {
+  background-color: cyan;
+}
+
+main li:nth-of-type(2) span {
+  background-color: magenta;
+}
+
+main li:nth-of-type(3) span {
+  background-color: yellow;
+}
