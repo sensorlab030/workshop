@@ -13,8 +13,6 @@ var socket = new WebSocket('ws://localhost:' + port);
 var static;
 
 socket.addEventListener('open', function(e) {
-  renderText(true);
-
   var data = d3.range(40).map(() => 0);
   socket.addEventListener('message', function(event) {
     data.push(JSON.parse(event.data)['sensor_' + sensor]);
@@ -24,7 +22,6 @@ socket.addEventListener('open', function(e) {
 });
 
 socket.addEventListener('close', function(e) {
-  renderText(false);
   d3.select('.line').remove();
 
   // location of the mock data, relative to the HTML file.
@@ -102,23 +99,4 @@ function render(n, data) {
     // Pop the old data point off the front.
     data.shift();
   }
-}
-
-function renderText(socket) {
-  if (document.querySelector('p')) {
-    document.querySelector('p').remove();
-  }
-  socket
-    ? document
-        .querySelector('h1')
-        .insertAdjacentHTML(
-          'afterend',
-          '<p><span>Socket connection found.</span> Live data is rendered.</p>'
-        )
-    : document
-        .querySelector('h1')
-        .insertAdjacentHTML(
-          'afterend',
-          '<p><span>No socket connection found.</span> Static mock data is rendered instead.</p>'
-        );
 }
