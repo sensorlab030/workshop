@@ -1,6 +1,9 @@
 # D3js examples
+**You need Firefox for this to work** <br>
+_(The other browsers require a server to serve the example data)_
 
 ## Getting started
+
 Just drag and drop the `index.html` file from `examples/d3js/index.html` into your prefered browser of choice.
 
 Every graph has it's own css and js file, you can start tweaking those to your own liking. If you aren't familiar enough with JavaScript and/or D3js, there are a few variables you can edit which will change things for you. All the graphs have a static and websocket version, depending on a succesful connection to your Arduino.
