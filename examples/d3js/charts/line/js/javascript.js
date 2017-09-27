@@ -105,6 +105,9 @@ function render(n, data) {
 }
 
 function renderText(socket) {
+  if (document.querySelector('p')) {
+    document.querySelector('p').remove();
+  }
   socket
     ? document
         .querySelector('h1')
