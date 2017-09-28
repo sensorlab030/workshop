@@ -12,10 +12,10 @@ var sensor = 2; // which sensor data should be rendered
 var socket = new WebSocket('ws://localhost:' + port);
 var static;
 
-socket.addEventListener('open', function(e) {
+socket.addEventListener('open', function() {
   var data = d3.range(40).map(() => 0);
-  socket.addEventListener('message', function(event) {
-    data.push(JSON.parse(event.data)['sensor_' + sensor]);
+  socket.addEventListener('message', function(e) {
+    data.push(JSON.parse(e.data)['sensor_' + sensor]);
   });
   static = false;
   render(40, data);

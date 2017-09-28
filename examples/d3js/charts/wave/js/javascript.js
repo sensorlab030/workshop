@@ -9,11 +9,11 @@ var socket = new WebSocket('ws://localhost:' + port);
 var indeterminate = true;
 var path;
 
-socket.addEventListener('open', function(e) {
+socket.addEventListener('open', function() {
   indeterminate = false;
-  socket.addEventListener('message', function(event) {
-    var d = JSON.parse(event.data);
-    update([d.sensor_1 || 0, d.sensor_2 || 0, d.sensor_3 || 0]);
+  socket.addEventListener('message', function(e) {
+    var data = JSON.parse(e.data);
+    update([data.sensor_1 || 0, data.sensor_2 || 0, data.sensor_3 || 0]);
   });
 });
 // color of the lines associated with the sensors.
@@ -35,7 +35,7 @@ path = svg
   .data([0.1, 0.1, 0.1])
   .enter()
   .append('path')
-  .attr('stroke', function(d, i) {
+  .attr('stroke', function(data, i) {
     return color[i];
   })
   .style('mix-blend-mode', 'darken')
