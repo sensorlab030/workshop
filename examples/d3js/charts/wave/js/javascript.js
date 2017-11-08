@@ -6,14 +6,18 @@ var svg = d3.select('svg'),
 // the port you choose in the SensorBridge setup
 var port = 9001;
 var socket = new WebSocket('ws://localhost:' + port);
+// which sensor is the heartbeat sensor
+var heartbeatSensor = 2;
 var indeterminate = true;
 var path;
+var range = [];
 
 socket.addEventListener('open', function() {
   indeterminate = false;
   socket.addEventListener('message', function(e) {
     var data = JSON.parse(e.data);
-    update([data.sensor_1 || 0, data.sensor_2 || 0, data.sensor_3 || 0]);
+    // deviation? explanation is in the function itself.
+    deviation(data);
   });
 });
 // color of the lines associated with the sensors.
@@ -54,22 +58,6 @@ if (indeterminate) {
   });
 }
 
-function update(data) {
-  path = svg
-    .selectAll('path')
-    .data(data)
-    .datum(function(d, i) {
-      return lineGenerator(d, i);
-    });
-
-  path
-    .transition()
-    .duration(100)
-    .attr('d', function(d) {
-      return d(angles);
-    });
-}
-
 function lineGenerator(d, i) {
   return d3
     .lineRadial()
@@ -87,4 +75,50 @@ function lineGenerator(d, i) {
           100
       );
     });
+}
+
+function update(data) {
+  path = svg
+    .selectAll('path')
+    .data(data)
+    .datum(function(d, i) {
+      return lineGenerator(d, i);
+    });
+
+  path
+    .transition()
+    .duration(100)
+    .attr('d', function(d) {
+      return d(angles);
+    });
+}
+
+// the heartbeat sensor always returns ~0.5 when not used.
+// this gives a false perspective of the result so the standarddiviation
+// is calculated with the latest 7 values, if the values are roughly the same
+// it is very likely the sensor isn't in use.
+function deviation(data) {
+  range = range.slice(-6).concat(data['sensor_' + heartbeatSensor]);
+
+  const average = range.reduce((acc, result, i) => {
+    if (i === range.length - 1) {
+      return (acc + Number(result)) / range.length;
+    }
+    return acc + Number(result);
+  }, 0);
+
+  const variance = range.reduce((acc, result, i) => {
+    if (i === range.length - 1) {
+      return (acc + Math.pow(Number(result) - average, 2)) / range.length;
+    }
+    return acc + Math.pow(Number(result) - average, 2);
+  }, 0);
+
+  update([
+    data.sensor_1 || 0,
+    Math.sqrt(variance) >= 0.1
+      ? (data.sensor_2 = data.sensor_2)
+      : (data.sensor_2 = 0),
+    data.sensor_3 || 0
+  ]);
 }
